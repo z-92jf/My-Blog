@@ -62,7 +62,7 @@ netease_comment: false
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
 sidebar-about-description: "欢迎来到 z_92jf 的个人博客"
-sidebar-avatar: https://www.imagehub.cc/image/avatar-hux.gfdTj0 # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: https://s1.imagehub.cc/images/2026/07/06/abf6e36b18b4e354e0f206b7f05b0290.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
