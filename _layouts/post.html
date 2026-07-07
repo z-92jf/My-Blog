@@ -29,6 +29,57 @@ layout: default
                 
                  <!-- ========== 在这里插入 Waline 评论 ========== -->
                 <hr style="margin: 40px 0 30px;" />
+                <style>
+                /* 1. 整体评论区域字体 */
+                #waline {
+                    font-size: 16px;
+                }
+                
+                /* 2. ★★★ 关键：评论内容字体（他人评论显示的地方） */
+                #waline .wl-content {
+                    font-size: 16px !important;
+                    line-height: 1.8 !important;
+                }
+                
+                /* 3. 评论者的昵称 */
+                #waline .wl-nick {
+                    font-size: 15px !important;
+                    font-weight: 600 !important;
+                }
+                
+                /* 4. 评论时间 */
+                #waline .wl-time {
+                    font-size: 13px !important;
+                    color: #999 !important;
+                }
+                
+                /* 5. 回复和点赞按钮 */
+                #waline .wl-reply,
+                #waline .wl-like {
+                    font-size: 14px !important;
+                }
+                
+                /* 6. 评论卡片的内边距（让评论不那么拥挤） */
+                #waline .wl-panel {
+                    padding: 16px 20px !important;
+                }
+                
+                /* 7. 如果有嵌套回复（楼中楼），也调整 */
+                #waline .wl-comment .wl-comment .wl-content {
+                    font-size: 15px !important;
+                }
+                
+                /* 8. 评论中的引用块 */
+                #waline .wl-content blockquote {
+                    font-size: 15px !important;
+                    padding: 8px 16px !important;
+                }
+                
+                /* 9. 评论中的代码块 */
+                #waline .wl-content code {
+                    font-size: 14px !important;
+                }
+                </style>
                 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
                 <div id="waline"></div>
                 <script type="module">
@@ -43,19 +94,6 @@ layout: default
                         pageSize: 15, // 每页评论数
                     });
                 </script>
-                <style>
-                /* 让评论区和文章风格更统一 */
-                #waline {
-                    margin-top: 10px;
-                }
-                #waline .wl-panel {
-                    border-radius: 8px;
-                }
-                /* 如果你的主题字体偏小，可以调整 */
-                #waline .wl-comment {
-                    font-size: 15px;
-                }
-                </style>
                 <!-- ========== Waline 评论结束 ========== -->
 
                 <hr style="visibility: hidden;">
