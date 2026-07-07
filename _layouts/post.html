@@ -32,6 +32,23 @@ layout: default
                 
                 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
                 <div id="waline"></div>
+                <script>
+                    setTimeout(function() {
+                        // 动态导入 Waline
+                        import('https://unpkg.com/@waline/client@v2/dist/waline.mjs').then(module => {
+                            const { init } = module;
+                            init({
+                                el: '#waline',
+                                serverURL: 'https://你的-waline-服务端地址/',
+                                path: window.location.pathname,
+                                lang: 'zh-CN',
+                            });
+                        }).catch(err => {
+                            console.log('Waline 加载失败，请稍后刷新', err);
+                        });
+                    }, 3000); // 延迟 3 秒加载，页面先显示内容
+                </script>
+
                 <script type="module">
                     import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
                     
