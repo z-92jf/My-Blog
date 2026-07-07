@@ -14,23 +14,7 @@
     {% include search.html %}
 
     {{ content }}
-    <head>
-    <!-- ... -->
-    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
-    <!-- ... -->
-    </head>
-    <body>
-    <!-- ... -->
-    <div id="waline"></div>
-    <script type="module">
-        import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
-
-        init({
-        el: '#waline',
-        serverURL: 'https://blogwaline.cc.cd',
-        });
-    </script>
-    </body>
+    
     {% include footer.html %}
 
 
